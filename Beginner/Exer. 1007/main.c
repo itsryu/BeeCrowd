@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    int num[4], x;
+    int num[4];
     
-    for(x = 0; x < 4; x++) {
-        scanf("%d", &num[x]);
+    for(int i = 0; i < 4; i++) {
+        scanf("%d", &num[i]);
     }
     
     printf("DIFERENCA = %d\n", (num[0] * num[1] - num[2] * num[3]));

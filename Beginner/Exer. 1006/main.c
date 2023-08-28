@@ -1,7 +1,10 @@
 #include <stdio.h>
+#define weightA 2.0
+#define weightB 3.0
+#define weightC 5.0
 
 int main(int argc, char *argv[]) {
-    double A, B, C, weightA = 2.0, weightB = 3.0, weightC = 5.0;
+    double A, B, C;
     
     scanf("%lf", &A);
     scanf("%lf", &B);
