@@ -2,13 +2,13 @@
 
 int main(int argc, char *argv[]) {
     int number, worked;
-    float received;
+    double received;
     
     scanf("%d", &number);
     scanf("%d", &worked);
-    scanf("%f", &received);
+    scanf("%lf", &received);
     
     printf("NUMBER = %d\n", number);
-    printf("SALARY = U$ %.2f\n", (received * worked));
+    printf("SALARY = U$ %.2lf\n", (received * worked));
     return 0;
 }

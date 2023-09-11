@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    int distance;
-    double spent;
+  int distance;
+  double spent;
 
-    scanf("%d", &distance);
-    scanf("%lf", &spent);
-    
-    printf("%.3lf km/l\n", distance / spent);
+  scanf("%d", &distance);
+  scanf("%lf", &spent);
 
-    return 0;
+  printf("%.3lf km/l\n", distance / spent);
+
+  return 0;
 }
