@@ -5,9 +5,7 @@ struct Produto {
   double price;
 };
 
-double calc(struct Produto produto, int amount) {
-  return produto.price * amount;
-}
+double calc(struct Produto produto, int amount);
 
 int main(int argc, char *argv[]) {
   int amount, code;
@@ -44,4 +42,8 @@ int main(int argc, char *argv[]) {
 
   printf("Total: R$ %.2lf\n", total);
   return 0;
+}
+
+double calc(struct Produto produto, int amount) {
+  return produto.price * amount;
 }
