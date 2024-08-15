@@ -2,6 +2,7 @@
 
 int main(int argc, char *argv[]) {
   int num[2];
+  
   scanf("%d", &num[0]);
   scanf("%d", &num[1]);
 

@@ -1,26 +1,29 @@
+#include <math.h>
 #include <stdio.h>
 
 int main(void) {
-  double value;
-  scanf("%lf", &value);
+  float value;
+  scanf("%f", &value);
 
-  double notes[6] = {100.00, 50.00, 20.00, 10.00, 5.00, 2.00};
-  double coins[6] = {1.0, 0.50, 0.25, 0.10, 0.05, 0.1};
+  int notes[6] = {100, 50, 20, 10, 5, 2};
+  float coins[6] = {1.00, 0.50, 0.25, 0.10, 0.05, 0.01};
 
   printf("NOTAS:\n");
-  for (int i = 0; i < 6; i++) {
+  for (int i = 0; i < (sizeof(notes) / sizeof(int)); i++) {
     int count = value / notes[i];
-    value -= count * notes[i];
+    
+    printf("%d nota(s) de R$ %d.00\n", count, notes[i]);
 
-    printf("%d nota(s) de R$ %.2lf\n", count, notes[i]);
+    value -= count * notes[i];
   }
 
   printf("MOEDAS:\n");
-  for (int i = 0; i < 6; i++) {
+  for (int i = 0; i < (sizeof(coins) / sizeof(float)); i++) {
     int count = value / coins[i];
-    value -= count * coins[i];
 
-    printf("%d moeda(s) de R$ %.2lf\n", count, coins[i]);
+    printf("%d moeda(s) de R$ %.2f\n", count, coins[i]);
+
+    value -= count * coins[i];
   }
 
   return 0;
